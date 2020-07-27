@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>设置</title>
+    <style>
+        body {
+            color: #323336;
+            font-size: 100%;
+            line-height: 150%;
+            padding: 0 1.5em 1.5em;
+        }
+
+        .item {
+            margin: 1em 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .label {
+            display: inline-block;
+            width: 85px;
+        }
+
+        .options {
+            display: inline-block;
+        }
+
+        .checkbox {
+            position: relative;
+            -webkit-appearance: none;
+            width: 47px;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 20px;
+            outline: none;
+            border: 1px solid #d2d2d2;
+            margin: 0;
+        }
+
+        .checkbox:before {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            content: '';
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #d2d2d2;
+            transition: all 0.2s linear;
+        }
+
+        .checkbox:checked {
+            background: #58ca5c;
+            border-color: #58ca5c;
+        }
+
+        .checkbox:checked:before {
+            left: 25px;
+            background: #fff;
+            transition: all 0.2s linear;
+        }
+    </style>
+    <script type="text/javascript" src="options.js"></script>
+</head>
+
+<body>
+    <div class="item">
+        <label class="label">自动转换：</label>
+        <div class="options">
+            <input type="checkbox" class="checkbox" id="switch">
+        </div>
+    </div>
+    <div class="item">
+        <label class="label">手动转换：</label>
+        <div class="options">
+            Ctrl + 鼠标左键
+        </div>
+    </div>
+    <div class="item">
+        <label class="label">关闭转换：</label>
+        <div class="options">
+            Alt + 鼠标左键
+        </div>
+    </div>
+</body>
+
+</html>

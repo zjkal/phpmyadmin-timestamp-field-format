@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "将phpMyAdmin中int类型时间戳转换成日期格式",
+	"version": "1.0.0",
+	"description": "将 phpMyAdmin 查询结果的 int 类型时间戳字段转换成日期格式显示。按『Ctrl + 鼠标左键』进行转换，按『Alt + 鼠标左键』关闭转换。",
+	"author": "yangrz",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"options_ui": {
+		"page": "options.html"
+	},
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://*/*",
+				"https://*/*"
+			],
+			"js": [
+				"jquery.min.js",
+				"content-script.js"
+			]
+		}
+	],
+	"homepage_url": "https://gitee.com/yangrz/phpmyadmin-timestamp-field-format"
+}
